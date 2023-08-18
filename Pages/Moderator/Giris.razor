@@ -1,0 +1,138 @@
+@page "/Giris"
+@inherits Pr81Base
+@inject IJSRuntime js
+@inject NavigationManager NavigationManager
+<style>
+    a:hover{
+        color:red;
+        text-decoration: underline overline dotted red;
+    }
+    .Tooltip{
+        position: relative;
+       
+        border-bottom: 1px dotted black;
+        cursor: help;
+    }
+    #spanText{
+        visibility:hidden;
+    position:absolute;
+    width:300px;
+    bottom:100%;
+    left:50%;
+    margin-left:-150px;
+    background-color: yellow;
+    color:black;
+    text-align:center;
+    padding: 5px 0;
+    border-radius: 6px;
+    z-index:1;
+
+    }
+    #spanText::after{
+    content:"";
+    position:absolute;
+    top:100%;
+    left:50%;
+    margin-left:-5px;
+    border-width:5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+.Tooltip:hover #spanText{
+    visibility: visible;
+}
+</style>
+<p>Welcome Back @Kullanici</p>
+<h1>Kitaplar</h1>
+<br/>
+ <div class="Tooltip">
+        <br/><br/><br/>
+   <table class="table">
+            <thead>
+                <tr>
+                    <th>Kitap Numarası</th>
+                    <th>Kitap Adı</th>
+                    <th>Yazar</th>
+                </tr>
+            </thead>
+            <tbody>
+    @if(people == null )
+    {
+        <p><em>Loading....</em></p>
+    }
+    else 
+    {
+        
+        @foreach(var p in people)
+        {
+            <tr>
+
+            <td>
+                @p.Id 
+            </td>
+            <td><a href="@p.Url" >@p.Name </a><span id="spanText">@Text</span></td>
+            <td>@p.Yazar</td>
+              </tr>    
+              
+        }
+       
+    }
+           </tbody>
+ </table>
+ </div>
+    <br/>
+    <p>@error Adet Kitab Yüklendi.</p>
+    <br/><br/>
+    <p>
+    Kitap Id:<input @bind="inputId1"/>
+    Yorum:<input @bind="inputkYorum"/>
+    </p>
+    <br/>
+    <button class="btn btn-success" @onclick="GetKitap">Kitap Getir</button>
+    <button class="btn btn-primary" @onclick=InsertYorum >Yorum Yap</button>
+    <br/>
+    <h1>Yorumlar</h1>
+<br/>
+ <div class="Yorum">
+        <br/><br/><br/>
+   <table class="table">
+            <thead>
+                <tr>
+                    <th>Yorum Sahibi</th>
+                    <th>Kitap Yorumu</th>
+                </tr>
+            </thead>
+            <tbody>
+    @if(yorum == null )
+    {
+        <p><em>Loading....</em></p>
+    }
+    else 
+    {
+        
+        @foreach(var x in yorum)
+        {
+            <tr>
+
+            <td>
+                @x.yorumcu 
+            </td>
+            <td>@x.kAdi </td>
+            <td>@x.kYorum</td>
+              </tr>    
+              
+        }
+       
+    }
+           </tbody>
+ </table>
+ </div>
+<br/>
+    <p>@error2 Adet Yorum Yüklendi.</p>
+    @code {
+      
+       static string connectionString = ("Server=.;Database=PdfApp;Encrypt=False;Integrated Security=SSPI;");
+
+        
+    }
+    

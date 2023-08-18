@@ -1,0 +1,68 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ex9
+build_property.RootNamespace = ex9
+build_property.ProjectDir = C:\Users\ferhat\desktop\ex9\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\ferhat\desktop\ex9
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/ferhat/desktop/ex9/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ferhat/desktop/ex9/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ferhat/desktop/ex9/Pages/kayit/Sıgn.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNca2F5aXRcU8SxZ24ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ferhat/desktop/ex9/Pages/Log/Kayıt.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9nXEthecSxdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ferhat/desktop/ex9/Pages/Moderator/Giris.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTW9kZXJhdG9yXEdpcmlzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ferhat/desktop/ex9/Pages/Moderator/Pr81.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTW9kZXJhdG9yXFByODEucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ferhat/desktop/ex9/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ferhat/desktop/ex9/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ferhat/desktop/ex9/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-1z3mgare75
+
+[C:/Users/ferhat/desktop/ex9/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-sc19ibhut9
+
+[C:/Users/ferhat/desktop/ex9/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ferhat/desktop/ex9/Pages/_Host.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ferhat/desktop/ex9/Pages/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0xheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

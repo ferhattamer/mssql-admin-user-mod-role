@@ -1,0 +1,66 @@
+@page "/Kayit"
+@inherits KayıtBase
+@inject NavigationManager NavigationManager
+@inject IJSRuntime js
+<p>
+  @Kontrol
+  <input placeholder="ID" @bind="inputId" />
+  <br />
+  <input placeholder="İsim" @bind="inputAd" />
+  <br />
+  <input placeholder="Soyisim" @bind="inputSoyad" />
+  <br />
+  <input placeholder="Kullanıcı Adı" @bind="inputKullaniciadi" />
+  <br />
+  <input type="password" minlenght="8 " placeholder="Şifre" @bind="inputPassword" required />
+  <br />
+  <input placeholder="Kullaıcı Rolü" @bind="inputRole" />
+</p>
+<br />
+<button class="btn btn-success" @onclick="GetUser">Kullanıcı Getir</button>
+<button class="btn btn-primary" @onclick="InsertUser">Kullacı Ekle</button>
+<button class="btn btn-warning" @onclick="UpdateUser">Kullanıcı Güncelle</button>
+<button class="btn btn-danger" @onclick="DeleteUser">Kullanıcı Sil</button>
+<br />
+<br />
+<h1>Kullanıcılar</h1>
+<br />
+<table class="table">
+  <thead>
+    <tr>
+      <th>Kullanıcı ID</th>
+      <th>Kullanıcı Adı</th>
+      <th>Kullanıcı Soyadı</th>
+      <th>Kullanıcı KullancıAdı</th>
+      <th>Kullanıcı Şifresi</th>
+      <th>Kullanıcı Rolü</th>
+    </tr>
+  </thead>
+  <tbody>
+    @if (kullanici == null)
+    {
+      <p><em>Loading....</em></p>
+    }
+    else
+    {
+
+      @foreach (var xm in kullanici)
+      {
+        <tr>
+
+          <td>
+            @xm.Id
+          </td>
+          <td>@xm.Ad </td>
+          <td>@xm.Soyad </td>
+          <td>@xm.KullaniciAdi</td>
+          <td>@xm.Password </td>
+          <td>@xm.Role</td>
+
+        </tr>
+
+      }
+
+    }
+  </tbody>
+</table>

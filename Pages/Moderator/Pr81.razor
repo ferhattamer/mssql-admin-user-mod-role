@@ -1,0 +1,56 @@
+@page "/admin"
+@inherits Pr81Base
+@inject IJSRuntime js
+
+@Kontrol
+<body>
+<br/>
+<p>
+    Id:<input @bind="inputId"/>
+    İsim:<input @bind="inputName"/>
+    Url:<input @bind="inputUrl"/>
+    Yazar:<input @bind="inputYazar"/>
+    </p>
+    <br/>
+    <button class="btn btn-success" @onclick="GetData">Pdf Getir</button>
+    <button class="btn btn-primary" @onclick="InsertData">Insert</button>
+    <button class="btn btn-warning" @onclick="UpdateData">Update</button>
+    <button class="btn btn-danger" @onclick="DeleteData">Delete</button>
+    <div class="Tooltip">
+        <br/><br/><br/>
+   <table class="table">
+            <thead>
+                <tr>
+                    <th>Kitap Numarası</th>
+                    <th>Kitap Adı</th>
+                    <th>Yazar</th>
+                </tr>
+            </thead>
+            <tbody>
+    @if(people == null )
+    {
+        <p><em>Loading....</em></p>
+    }
+    else 
+    {
+        
+        @foreach(var p in people)
+        {
+            <tr>
+
+            <td>
+                @p.Id 
+            </td>
+            <td><a href="@p.Url" >@p.Name </a></td>
+            <td>@p.Yazar</td>
+              </tr>    
+              
+        }
+       
+    }
+           </tbody>
+ </table>
+ </div>
+    <br/>
+    <p>@error Adet Kitab Yüklendi.</p>
+    </body>
